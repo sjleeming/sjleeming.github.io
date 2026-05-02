@@ -36,6 +36,25 @@ themeBtn.addEventListener('click', () => {
   applyTheme(next);
 });
 
+// ─── Scroll progress bar ───
+const progressBar = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = total > 0 ? (scrolled / total * 100) + '%' : '0%';
+}, { passive: true });
+
+// ─── Copy-to-clipboard on contact links ───
+document.querySelectorAll('.contact-link[data-copy]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(link.dataset.copy).then(() => {
+      link.classList.add('copied');
+      setTimeout(() => link.classList.remove('copied'), 1800);
+    });
+  });
+});
+
 // ─── Mobile nav toggle ───
 const toggle = document.querySelector('.nav-menu-toggle');
 const navUl = document.querySelector('nav ul');

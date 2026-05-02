@@ -76,6 +76,18 @@
   border-color: var(--accent);
 }
 
+/* ─── Scroll progress bar ─── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  z-index: 200;
+  transition: width 0.05s linear;
+  pointer-events: none;
+}
+
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -800,6 +812,17 @@ h1 em {
 
 .contact-link:hover .contact-link-value { color: var(--accent); }
 
+.contact-link.copied .contact-link-value {
+  color: var(--accent);
+}
+.contact-link.copied .contact-link-value::after {
+  content: ' — copied!';
+  font-size: 0.7rem;
+  font-family: var(--mono);
+  letter-spacing: 0.06em;
+  opacity: 0.7;
+}
+
 /* ─── Footer ─── */
 footer {
   display: flex;
@@ -890,4 +913,77 @@ footer {
   .timeline { padding-left: 2rem; }
   .timeline-marker { left: -2rem; transform: translateX(-4px); }
   .timeline-marker.small { left: -2rem; transform: translateX(-2px); }
+}
+
+/* ─── Print styles ─── */
+@media print {
+  * { animation: none !important; transition: none !important; }
+
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 11pt;
+  }
+
+  body::before, body::after,
+  .ambient-glow,
+  .scroll-progress,
+  nav,
+  .hero-actions,
+  .theme-toggle,
+  footer { display: none !important; }
+
+  section {
+    padding: 24pt 0 18pt !important;
+    border-bottom: 0.5pt solid #ccc !important;
+    break-inside: avoid;
+  }
+
+  #about { min-height: unset !important; }
+
+  .hero-inner { display: block !important; }
+
+  h1 {
+    font-size: 28pt !important;
+    color: #111 !important;
+  }
+
+  h1 em { color: #2c5f8a !important; }
+
+  h2 {
+    font-size: 7pt !important;
+    color: #666 !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .card {
+    border: 0.5pt solid #ccc !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .card-title, .card-headline { color: #111 !important; }
+
+  .card-sub, .card-org, .card-modules,
+  .timeline-date, .meta-label { color: #666 !important; }
+
+  .card-body, .card-list li, .research-list li { color: #333 !important; }
+
+  .section-num, .card-eyebrow, .timeline-marker,
+  .card-badge, .date-badge { color: #2c5f8a !important; }
+
+  .timeline::before { background: #ccc !important; }
+
+  .skill-tag {
+    border: 0.5pt solid #ccc !important;
+    color: #333 !important;
+    background: #f5f5f5 !important;
+  }
+
+  .contact-link-value { font-size: 14pt !important; color: #111 !important; }
+
+  a[href]::after {
+    content: none !important;
+  }
 }
