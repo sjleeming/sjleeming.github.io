@@ -121,6 +121,55 @@ h1 {
   margin-bottom: 2rem;
 }
 
+/* ─── CV Download Box ─── */
+.download-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 420px;
+  background: var(--surface);
+}
+
+.download-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.download-label {
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.download-meta {
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.download-btn:hover { opacity: 0.85; }
+
 .cta {
   display: inline-block;
   padding: 0.55rem 1.4rem;
