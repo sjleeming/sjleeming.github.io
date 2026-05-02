@@ -23,6 +23,19 @@ const navObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach(s => navObserver.observe(s));
 
+// ─── Theme toggle ───
+const themeBtn = document.getElementById('theme-toggle');
+const applyTheme = (theme) => {
+  document.documentElement.setAttribute('data-theme', theme);
+  themeBtn.textContent = theme === 'light' ? 'Dark' : 'Light';
+};
+applyTheme(localStorage.getItem('theme') || 'dark');
+themeBtn.addEventListener('click', () => {
+  const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  localStorage.setItem('theme', next);
+  applyTheme(next);
+});
+
 // ─── Mobile nav toggle ───
 const toggle = document.querySelector('.nav-menu-toggle');
 const navUl = document.querySelector('nav ul');
