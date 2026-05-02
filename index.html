@@ -3,13 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samuel Leeming</title>
+  <title>Samuel Leeming — MChem Chemistry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <div class="ambient-glow"></div>
+
+  <!-- NAV -->
   <nav>
-    <span class="nav-name">Samuel Leeming</span>
+    <a href="#about" class="nav-name">SL</a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
@@ -17,170 +23,232 @@
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="Samuel_Leeming_CV.pdf" download class="nav-download">Download CV</a></li>
+      <li><a href="Samuel_Leeming_CV.pdf" download class="nav-download">CV&nbsp;↓</a></li>
     </ul>
+    <button class="nav-menu-toggle" aria-label="Toggle menu">&#9776;</button>
   </nav>
 
   <main>
 
     <!-- HERO -->
     <section id="about">
-      <div class="section-inner">
-        <h1>Samuel Leeming</h1>
-        <p class="tagline">MChem Medicinal &amp; Pharmaceutical Chemistry &middot; Loughborough University</p>
-        <p class="bio">
-          A driven and inquisitive chemistry student on track for a 2:1, with demonstrated aptitude across
-          synthetic, analytical and computational chemistry. Particular interest in the design and development
-          of therapeutically relevant compounds. Seeking a graduate position in medicinal or synthetic chemistry
-          within the pharmaceutical industry.
-        </p>
-        <div class="download-box">
-          <div class="download-info">
-            <span class="download-label">Curriculum Vitae</span>
-            <span class="download-meta">PDF &middot; Samuel Leeming</span>
+      <div class="section-inner hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow">MChem &middot; Medicinal &amp; Pharmaceutical Chemistry</p>
+          <h1>Samuel<br><em>Leeming</em></h1>
+          <p class="hero-location">Loughborough University &nbsp;&middot;&nbsp; 2023–2027</p>
+          <p class="bio">
+            A driven chemistry student on track for a 2:1, with demonstrated aptitude across
+            synthetic, analytical and computational chemistry. Particular interest in the design
+            and development of therapeutically relevant compounds. Seeking a graduate position
+            in medicinal or synthetic chemistry within the pharmaceutical industry.
+          </p>
+          <div class="hero-actions">
+            <a href="Samuel_Leeming_CV.pdf" download class="btn-primary">
+              <span>Download CV</span>
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v8M3 6l4 4 4-4M1 11h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#research" class="btn-outline">View Research &rarr;</a>
           </div>
-          <a href="Samuel_Leeming_CV.pdf" download class="download-btn">Download CV</a>
         </div>
-        <a href="#research" class="cta">View Research</a>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-label">Predicted</span>
+            <span class="meta-value">2:1</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Year</span>
+            <span class="meta-value">2 / 4</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Funded by</span>
+            <span class="meta-value">Leverhulme</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Focus</span>
+            <span class="meta-value">Med. Chem.</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- EDUCATION -->
     <section id="education">
       <div class="section-inner">
-        <h2>Education</h2>
+        <h2><span class="section-num">01</span>Education</h2>
+        <div class="timeline stagger">
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-title">Loughborough University</span>
-            <span class="card-date">Sept 2023 &ndash; Jun 2027</span>
+          <div class="timeline-entry animate-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">2023–2027</div>
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Loughborough University</span>
+                <span class="card-badge">In Progress</span>
+              </div>
+              <p class="card-sub">MChem Medicinal and Pharmaceutical Chemistry &middot; Predicted 2:1</p>
+              <p class="card-body">
+                Final year dissertation: investigating new opioid alternatives for analgesia, focusing
+                on emerging analgesic mechanisms and non-opioid targets.
+              </p>
+              <p class="card-modules">
+                Pharmacokinetics &amp; Drug Metabolism &middot; Modern Aspects of Organic Chemistry &middot;
+                Pharmaceutical and Biomedical Analysis &middot; Fundamental Synthetic Chemistry &middot;
+                Structural Characterisation &middot; Spectroscopy and Analysis &middot; Computer Programming
+              </p>
+            </div>
           </div>
-          <p class="card-sub">MChem Medicinal and Pharmaceutical Chemistry &middot; Predicted 2:1</p>
-          <p>
-            Final year dissertation: investigating new opioid alternatives for analgesia, focusing on
-            emerging analgesic mechanisms and non-opioid targets.
-          </p>
-          <p class="modules">
-            Relevant modules: Pharmacokinetics &amp; Drug Metabolism, Modern Aspects of Organic Chemistry,
-            Pharmaceutical and Biomedical Analysis, Fundamental Synthetic Chemistry, Structural Characterisation,
-            Spectroscopy and Analysis, Computer Programming, and more.
-          </p>
-        </div>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-title">Bilborough College</span>
-            <span class="card-date">Sept 2021 &ndash; Jun 2023</span>
+          <div class="timeline-entry animate-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">2021–2023</div>
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Bilborough College</span>
+              </div>
+              <p class="card-sub">A-Levels</p>
+              <div class="grade-row">
+                <span class="grade"><span class="grade-sub">A</span>Chemistry</span>
+                <span class="grade"><span class="grade-sub">B</span>Mathematics</span>
+                <span class="grade"><span class="grade-sub">B</span>Biology</span>
+              </div>
+              <p class="card-body">Cambridge Chemistry Challenge &mdash; <em>Silver Award</em></p>
+            </div>
           </div>
-          <p class="card-sub">A-Levels</p>
-          <p>Chemistry: A &nbsp;&middot;&nbsp; Mathematics: B &nbsp;&middot;&nbsp; Biology: B</p>
-          <p>Cambridge Chemistry Challenge &mdash; Silver Award</p>
-        </div>
 
-        <div class="card">
-          <div class="card-header">
-            <span class="card-title">West Park School</span>
+          <div class="timeline-entry animate-in">
+            <div class="timeline-marker small"></div>
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">West Park School</span>
+              </div>
+              <p class="card-sub">GCSEs &mdash; 11 subjects including Mathematics, Sciences and French</p>
+            </div>
           </div>
-          <p class="card-sub">GCSEs</p>
-          <p>11 GCSEs including Mathematics, Sciences and French.</p>
-        </div>
 
+        </div>
       </div>
     </section>
 
     <!-- RESEARCH -->
     <section id="research">
       <div class="section-inner">
-        <h2>Research Experience</h2>
-
-        <div class="card featured">
-          <div class="card-header">
-            <span class="card-title">Undergraduate Research Intern</span>
-            <span class="card-date">Jul &ndash; Sep 2025</span>
+        <h2><span class="section-num">02</span>Research</h2>
+        <div class="stagger">
+          <div class="card featured animate-in">
+            <div class="featured-header">
+              <div>
+                <p class="card-eyebrow">Undergraduate Research Intern</p>
+                <h3 class="card-headline">Porphyrins &amp; Lanthanide Complexes<br>for Photodynamic Therapy</h3>
+              </div>
+              <div class="featured-meta">
+                <span class="date-badge">Jul–Sep 2025</span>
+                <span class="funder-badge">Leverhulme Trust</span>
+              </div>
+            </div>
+            <p class="card-institution">Dept. of Chemistry, Loughborough University &middot; Supervised by Dr S. E. Bodman</p>
+            <ul class="research-list">
+              <li>Designed and synthesised a set of novel &pi;-extended porphyrins and lanthanide (Eu) complexes for potential applications in photodynamic therapy (PDT).</li>
+              <li>Conducted inert atmosphere synthesis using Schlenk line techniques, developing practical skills in handling air/moisture-sensitive compounds.</li>
+              <li>Characterised target compounds using NMR spectroscopy, UV-Vis absorption, fluorescence spectroscopy, mass spectrometry, X-ray crystallography and column chromatography.</li>
+              <li>Worked collaboratively alongside PhD and PDRA researchers, gaining first-hand experience in a professional academic research environment.</li>
+              <li>Authored a comprehensive written research report summarising findings and their implications for future work.</li>
+            </ul>
+            <div class="research-tags">
+              <span>PDT</span><span>Porphyrins</span><span>Lanthanides (Eu)</span>
+              <span>NMR</span><span>Schlenk Technique</span><span>X-ray Crystallography</span>
+              <span>Fluorescence Spectroscopy</span>
+            </div>
           </div>
-          <p class="card-sub">Department of Chemistry, Loughborough University &middot; Supervised by Dr S. E. Bodman &middot; Funded by the Leverhulme Trust</p>
-          <ul>
-            <li>Designed and synthesised a set of novel &pi;-extended porphyrins and lanthanide (Eu) complexes for potential applications in photodynamic therapy (PDT).</li>
-            <li>Conducted inert atmosphere synthesis using Schlenk line techniques, developing practical skills in handling air/moisture-sensitive compounds.</li>
-            <li>Characterised target compounds using NMR spectroscopy, UV-Vis absorption, fluorescence spectroscopy, mass spectrometry, X-ray crystallography and column chromatography.</li>
-            <li>Worked collaboratively alongside PhD and PDRA researchers, gaining first-hand experience in a professional academic research environment.</li>
-            <li>Authored a comprehensive written research report summarising findings and their implications for future work.</li>
-          </ul>
         </div>
-
       </div>
     </section>
 
     <!-- EXPERIENCE -->
     <section id="experience">
       <div class="section-inner">
-        <h2>Work Experience</h2>
-
-        <div class="card">
-          <div class="card-header">
-            <span class="card-title">Crew Member &mdash; McDonald's</span>
-            <span class="card-date">Apr 2022 &ndash; Present</span>
+        <h2><span class="section-num">03</span>Experience</h2>
+        <div class="timeline stagger">
+          <div class="timeline-entry animate-in">
+            <div class="timeline-marker"></div>
+            <div class="timeline-date">Apr 2022–Present</div>
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Crew Member</span>
+                <span class="card-org">McDonald's</span>
+              </div>
+              <ul class="card-list">
+                <li>Delivered high-quality customer service in a high-pressure environment, consistently maintaining quality and efficiency during peak periods.</li>
+                <li>Demonstrated strong reliability over four years of continued employment alongside full-time education.</li>
+                <li>Collaborated within a large team, developing communication, adaptability and problem-solving skills under time constraints.</li>
+                <li>Adhered to strict food safety, hygiene and operational standards.</li>
+              </ul>
+            </div>
           </div>
-          <ul>
-            <li>Delivered high-quality customer service in a high-pressure environment, consistently maintaining quality and efficiency during peak periods.</li>
-            <li>Demonstrated strong reliability over four years of continued employment alongside full-time education.</li>
-            <li>Collaborated within a large team, developing communication, adaptability and problem-solving skills under time constraints.</li>
-            <li>Adhered to strict food safety, hygiene and operational standards.</li>
-          </ul>
         </div>
-
       </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills">
       <div class="section-inner">
-        <h2>Skills</h2>
+        <h2><span class="section-num">04</span>Skills</h2>
+        <div class="skills-layout stagger">
 
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Laboratory</h3>
-            <ul>
-              <li>NMR Spectroscopy</li>
-              <li>HPLC</li>
-              <li>IR Spectroscopy</li>
-              <li>UV-Vis &amp; Fluorescence Spectroscopy</li>
-              <li>Mass Spectrometry</li>
-              <li>Column &amp; Flash Chromatography</li>
-              <li>Schlenk Line / Inert Atmosphere Synthesis</li>
-              <li>X-ray Crystallography</li>
-            </ul>
+          <div class="skill-category animate-in">
+            <h3 class="skill-cat-title">Laboratory</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">NMR Spectroscopy</span>
+              <span class="skill-tag">HPLC</span>
+              <span class="skill-tag">IR Spectroscopy</span>
+              <span class="skill-tag">UV-Vis Spectroscopy</span>
+              <span class="skill-tag">Fluorescence Spectroscopy</span>
+              <span class="skill-tag">Mass Spectrometry</span>
+              <span class="skill-tag">Column Chromatography</span>
+              <span class="skill-tag">Flash Chromatography</span>
+              <span class="skill-tag">Schlenk Line</span>
+              <span class="skill-tag">Inert Atmosphere Synthesis</span>
+              <span class="skill-tag">X-ray Crystallography</span>
+            </div>
           </div>
-          <div class="skill-group">
-            <h3>Software &amp; Computing</h3>
-            <ul>
-              <li>ChemDraw</li>
-              <li>ORCA (Quantum Chemistry)</li>
-              <li>Microsoft Office Suite</li>
-              <li>Command Line / Terminal</li>
-              <li>AI-assisted Research Workflows</li>
-            </ul>
+
+          <div class="skill-category animate-in">
+            <h3 class="skill-cat-title">Software &amp; Computing</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">ChemDraw</span>
+              <span class="skill-tag">ORCA (Quantum Chemistry)</span>
+              <span class="skill-tag">Microsoft Office Suite</span>
+              <span class="skill-tag">Command Line / Terminal</span>
+              <span class="skill-tag">AI-assisted Research Workflows</span>
+            </div>
           </div>
-          <div class="skill-group">
-            <h3>Achievements</h3>
-            <ul>
-              <li>Cambridge Chemistry Challenge &mdash; Silver (2023)</li>
-              <li>Loughborough University Hall Rugby Team (2024&ndash;25)</li>
-            </ul>
+
+          <div class="skill-category animate-in">
+            <h3 class="skill-cat-title">Achievements &amp; Activities</h3>
+            <div class="skill-tags">
+              <span class="skill-tag highlight">Cambridge Chemistry Challenge &mdash; Silver (2023)</span>
+              <span class="skill-tag">Loughborough Hall Rugby Team (2024–25)</span>
+            </div>
           </div>
+
         </div>
-
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
       <div class="section-inner">
-        <h2>Contact</h2>
-        <p>Currently based in Derby, UK. Open to relocation. Full UK Driving Licence.</p>
+        <h2><span class="section-num">05</span>Contact</h2>
+        <p class="contact-intro">Based in Derby, UK &middot; Open to relocation &middot; Full UK Driving Licence</p>
         <div class="contact-links">
-          <a href="mailto:samjleeming@gmail.com">samjleeming@gmail.com</a>
-          <a href="tel:+447925844944">+44 7925 844944</a>
+          <a href="mailto:samjleeming@gmail.com" class="contact-link">
+            <span class="contact-link-label">Email</span>
+            <span class="contact-link-value">samjleeming@gmail.com</span>
+          </a>
+          <a href="tel:+447925844944" class="contact-link">
+            <span class="contact-link-label">Phone</span>
+            <span class="contact-link-value">+44 7925 844944</span>
+          </a>
         </div>
       </div>
     </section>
@@ -188,7 +256,8 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Samuel Leeming</p>
+    <span class="footer-name">Samuel Leeming</span>
+    <span class="footer-copy">&copy; 2025</span>
   </footer>
 
   <script src="script.js"></script>
