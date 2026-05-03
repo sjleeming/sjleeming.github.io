@@ -867,8 +867,6 @@ footer {
     gap: 1.5rem;
   }
 
-  .meta-item { text-align: left; }
-
   .featured-header { flex-direction: column; }
   .featured-meta { align-items: flex-start; flex-direction: row; }
 
