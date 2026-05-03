@@ -121,6 +121,7 @@
   z-index: 10;
   border-left: 1px solid var(--border);
   padding-left: 1.25rem;
+  background: var(--bg);
 }
 
 .key-facts dl {
