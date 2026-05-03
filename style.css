@@ -117,7 +117,7 @@
   position: fixed;
   top: 40%;
   transform: translateY(-50%);
-  left: calc(50% + 430px + 1.5rem);
+  left: calc(50% + var(--max-w) / 2 + 1.5rem);
   z-index: 10;
   border-left: 1px solid var(--border);
   padding-left: 1.25rem;
@@ -140,7 +140,7 @@
 
 .key-facts dt {
   font-family: var(--mono);
-  font-size: 0.45rem;
+  font-size: 0.6rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
