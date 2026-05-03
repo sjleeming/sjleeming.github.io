@@ -383,11 +383,6 @@ h1 {
   animation-delay: 0.2s;
 }
 
-h1 em {
-  font-style: italic;
-  color: var(--accent);
-  font-weight: 300;
-}
 
 .hero-location {
   font-family: var(--mono);
@@ -990,7 +985,6 @@ footer {
     color: #111 !important;
   }
 
-  h1 em { color: #2c5f8a !important; }
 
   h2 {
     font-size: 7pt !important;
