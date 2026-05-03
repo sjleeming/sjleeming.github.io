@@ -15,8 +15,8 @@
   --radius:       3px;
   --max-w:        860px;
   --mono:         'IBM Plex Mono', 'Courier New', monospace;
-  --serif:        'Lora', Georgia, serif;
-  --display:      'Cormorant Garamond', Georgia, serif;
+  --serif:        'Aptos', 'Calibri', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --display:      'Aptos', 'Calibri', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 /* ─── Light theme ─── */
