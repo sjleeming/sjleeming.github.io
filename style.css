@@ -405,36 +405,6 @@ h1 em {
   color: var(--accent);
 }
 
-.hero-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  padding-bottom: 0.25rem;
-  animation: fadeUp 0.8s ease both;
-  animation-delay: 0.4s;
-}
-
-.meta-item { text-align: right; }
-
-.meta-label {
-  display: block;
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.2rem;
-}
-
-.meta-value {
-  display: block;
-  font-family: var(--display);
-  font-size: 1.45rem;
-  font-weight: 300;
-  color: var(--text);
-  letter-spacing: 0.01em;
-  line-height: 1.1;
-}
 
 /* ─── Timeline ─── */
 .timeline {
