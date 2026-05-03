@@ -112,6 +112,60 @@
   flex-shrink: 0;
 }
 
+/* ─── Key facts sidebar ─── */
+.key-facts {
+  position: fixed;
+  top: 40%;
+  transform: translateY(-50%);
+  left: calc(50% + 430px + 1.5rem);
+  z-index: 10;
+  border-left: 1px solid var(--border);
+  padding-left: 1.25rem;
+}
+
+.key-facts dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.key-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.key-facts dt {
+  font-family: var(--mono);
+  font-size: 0.45rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.key-facts dd {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text-dim);
+  letter-spacing: -0.01em;
+}
+
+.key-fact-primary {
+  font-size: 1.25rem;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+@media (max-width: 1100px) {
+  .key-facts { display: none; }
+}
+
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -914,6 +968,7 @@ footer {
   body::before, body::after,
   .ambient-glow,
   .scroll-progress,
+  .key-facts,
   nav,
   .hero-actions,
   .theme-toggle,
