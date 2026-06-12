@@ -9,7 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='none' stroke='%236fd3ff' stroke-width='8'/%3E%3C/svg%3E">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var theme = localStorage.getItem('theme');
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (err) {}
+  </script>
 
   <!-- SEO -->
   <meta name="description" content="Samuel Leeming — MChem Medicinal & Pharmaceutical Chemistry student at Loughborough University. Seeking graduate roles in medicinal or synthetic chemistry." />

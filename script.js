@@ -1,15 +1,14 @@
-// ─── Theme toggle (persisted; respects prefers-color-scheme on first visit) ───
+// ─── Theme toggle (initial theme is set by the inline <head> script to avoid FOUC) ───
 const themeBtn = document.getElementById('theme-toggle');
 const applyTheme = (theme) => {
   document.documentElement.setAttribute('data-theme', theme);
   themeBtn.textContent = theme === 'light' ? 'Dark' : 'Light';
+  themeBtn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
 };
-const stored = localStorage.getItem('theme');
-const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-applyTheme(stored || (prefersLight ? 'light' : 'dark'));
+applyTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
 themeBtn.addEventListener('click', () => {
   const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-  localStorage.setItem('theme', next);
+  try { localStorage.setItem('theme', next); } catch (err) {}
   applyTheme(next);
 });
 
@@ -36,16 +35,18 @@ const navObserver = new IntersectionObserver((entries) => {
       });
     }
   });
-}, { rootMargin: '-40% 0px -55% 0px' });
+}, { rootMargin: '-30% 0px -55% 0px' });
 sections.forEach(s => navObserver.observe(s));
 
 // ─── Copy-to-clipboard on contact links ───
 document.querySelectorAll('.contact-link[data-copy]').forEach(link => {
   link.addEventListener('click', (e) => {
+    if (!navigator.clipboard) return; // fall back to native mailto:/tel: behaviour
     e.preventDefault();
     navigator.clipboard.writeText(link.dataset.copy).then(() => {
+      clearTimeout(link._copiedTimer);
       link.classList.add('copied');
-      setTimeout(() => link.classList.remove('copied'), 1800);
-    });
+      link._copiedTimer = setTimeout(() => link.classList.remove('copied'), 1800);
+    }).catch(() => { window.location.href = link.href; });
   });
 });
