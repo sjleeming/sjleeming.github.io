@@ -8,7 +8,7 @@
   --border-hover:  #31507a;
   --text:          #e8eef6;
   --text-dim:      #93a7bd;
-  --muted:         #5d7693;
+  --muted:         #6c87a5;
   --accent:        #6fd3ff;
   --accent-2:      #7b6cf6;
   --grad:          linear-gradient(90deg, #3aa7e0, #7b6cf6);
@@ -30,7 +30,7 @@
   --border-hover:  #9fb6cd;
   --text:          #16243a;
   --text-dim:      #46607c;
-  --muted:         #7a90a8;
+  --muted:         #5c748e;
   --accent:        #2c6cb0;
   --accent-2:      #6c5cd6;
   --grad:          linear-gradient(90deg, #2c6cb0, #6c5cd6);
@@ -113,7 +113,11 @@ main {
 }
 
 /* ─── Sidebar content ─── */
-.sidebar-inner { position: relative; }
+.sidebar-inner {
+  position: relative;
+  max-height: 100%;
+  overflow-y: auto;
+}
 
 .avatar {
   width: 88px;
@@ -142,7 +146,7 @@ main {
 
 h1 {
   font-size: clamp(2.2rem, 3.4vw, 3rem);
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.05;
   background: linear-gradient(100deg, var(--text) 30%, var(--accent) 110%);
@@ -627,12 +631,20 @@ h2 {
   color: var(--muted);
 }
 
-.contact-link-value { color: var(--text); font-size: 0.88rem; font-weight: 500; }
+.contact-link-value {
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
 
 .contact-link.copied::after {
   content: "Copied ✓";
   position: absolute;
   right: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
   background: var(--grad);
   color: #fff;
   font-size: 0.68rem;
@@ -664,6 +676,9 @@ footer {
 }
 
 .js .animate-in.visible { opacity: 1; transform: none; }
+
+/* Restore hover lift on cards that are themselves animated (e.g. featured card) */
+.js .card.animate-in.visible:hover { transform: translateY(-3px); }
 
 .js .animate-in:nth-child(2) { transition-delay: 0.08s; }
 .js .animate-in:nth-child(3) { transition-delay: 0.16s; }
