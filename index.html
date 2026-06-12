@@ -6,8 +6,9 @@
   <title>Samuel Leeming — MChem Chemistry</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- SEO -->
   <meta name="description" content="Samuel Leeming — MChem Medicinal & Pharmaceutical Chemistry student at Loughborough University. Seeking graduate roles in medicinal or synthetic chemistry." />
@@ -26,80 +27,78 @@
 </head>
 <body>
 
-  <aside class="key-facts" aria-label="Key facts">
-    <dl>
-      <div class="key-fact">
-        <dt>Predicted</dt>
-        <dd class="key-fact-primary">2:1</dd>
-      </div>
-      <div class="key-fact">
-        <dt>Year</dt>
-        <dd>3 / 4</dd>
-      </div>
-      <div class="key-fact">
-        <dt>Focus</dt>
-        <dd>Med. Chem.</dd>
-      </div>
-      <div class="key-fact">
-        <dt>Available</dt>
-        <dd>2027</dd>
-      </div>
-      <div class="key-fact">
-        <dt>Location</dt>
-        <dd>Derby, UK</dd>
-      </div>
-    </dl>
-  </aside>
+  <div class="layout">
 
-  <div class="scroll-progress" id="scroll-progress"></div>
-  <div class="ambient-glow"></div>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <svg class="molecule" viewBox="0 0 320 480" fill="none" aria-hidden="true">
+        <g class="molecule-a">
+          <polygon points="160,40 230,80 230,160 160,200 90,160 90,80" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="160" cy="40" r="5" fill="currentColor"/>
+          <circle cx="230" cy="160" r="5" fill="currentColor"/>
+          <circle cx="90" cy="80" r="5" fill="currentColor"/>
+          <line x1="160" y1="40" x2="160" y2="0" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="230" y1="80" x2="270" y2="56" stroke="currentColor" stroke-width="1.2"/>
+        </g>
+        <g class="molecule-b">
+          <polygon points="80,330 130,358 130,414 80,442 30,414 30,358" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="130" cy="358" r="4" fill="currentColor"/>
+          <circle cx="30" cy="414" r="4" fill="currentColor"/>
+          <line x1="130" y1="414" x2="172" y2="438" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="172" cy="438" r="4" fill="currentColor"/>
+        </g>
+      </svg>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#about" class="nav-name">SL</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="Samuel_Leeming_CV.pdf" download class="nav-download">CV&nbsp;↓</a></li>
-    </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">Light</button>
-    <button class="nav-menu-toggle" aria-label="Toggle menu">&#9776;</button>
-  </nav>
-
-  <main>
-
-    <!-- HERO -->
-    <section id="about">
-      <div class="section-inner hero-inner">
+      <div class="sidebar-inner">
         <div class="avatar" aria-hidden="true">SL</div>
-        <p class="hero-eyebrow">MChem &middot; Medicinal &amp; Pharmaceutical Chemistry</p>
+        <p class="eyebrow">MChem · Medicinal &amp; Pharmaceutical Chemistry</p>
         <h1>Samuel Leeming</h1>
-        <p class="hero-location">Loughborough University &nbsp;&middot;&nbsp; 2023–2027</p>
+        <p class="sidebar-meta">Loughborough University · 2023–2027</p>
         <p class="bio">
           A driven chemistry student on track for a 2:1, with demonstrated aptitude across
           synthetic, analytical and computational chemistry. Particular interest in the design
           and development of therapeutically relevant compounds. Seeking a graduate position
           in medicinal or synthetic chemistry within the pharmaceutical industry.
         </p>
-        <div class="hero-actions">
+
+        <dl class="key-facts" aria-label="Key facts">
+          <div class="key-fact"><dt>Predicted</dt><dd>2:1</dd></div>
+          <div class="key-fact"><dt>Year</dt><dd>3 / 4</dd></div>
+          <div class="key-fact"><dt>Available</dt><dd>2027</dd></div>
+          <div class="key-fact"><dt>Location</dt><dd>Derby, UK</dd></div>
+        </dl>
+
+        <nav class="side-nav" aria-label="Section navigation">
+          <a href="#education"><span class="nav-num">01</span><span class="nav-line"></span>Education</a>
+          <a href="#research"><span class="nav-num">02</span><span class="nav-line"></span>Research</a>
+          <a href="#experience"><span class="nav-num">03</span><span class="nav-line"></span>Experience</a>
+          <a href="#skills"><span class="nav-num">04</span><span class="nav-line"></span>Skills</a>
+          <a href="#contact"><span class="nav-num">05</span><span class="nav-line"></span>Contact</a>
+        </nav>
+
+        <div class="sidebar-actions">
           <a href="Samuel_Leeming_CV.pdf" download class="btn-primary">
             <span>Download CV</span>
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v8M3 6l4 4 4-4M1 11h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#research" class="btn-outline">View Research &rarr;</a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">Light</button>
+        </div>
+
+        <div class="sidebar-contacts">
+          <a href="mailto:samjleeming@gmail.com">Email</a>
+          <a href="tel:+447925844944">Phone</a>
+          <a href="https://www.linkedin.com/in/samuel-leeming-9bb17433b/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- EDUCATION -->
-    <section id="education">
-      <div class="section-inner">
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- EDUCATION -->
+      <section id="education">
         <h2><span class="section-num">01</span>Education</h2>
-        <div class="timeline stagger">
+        <div class="timeline">
 
           <div class="timeline-entry animate-in">
             <div class="timeline-marker"></div>
@@ -109,15 +108,15 @@
                 <span class="card-title">Loughborough University</span>
                 <span class="card-badge">In Progress</span>
               </div>
-              <p class="card-sub">MChem Medicinal and Pharmaceutical Chemistry &middot; Predicted 2:1</p>
+              <p class="card-sub">MChem Medicinal and Pharmaceutical Chemistry · Predicted 2:1</p>
               <p class="card-body">
                 Final year dissertation: investigating new opioid alternatives for analgesia, focusing
                 on emerging analgesic mechanisms and non-opioid targets.
               </p>
               <p class="card-modules">
-                Pharmacokinetics &amp; Drug Metabolism &middot; Modern Aspects of Organic Chemistry &middot;
-                Pharmaceutical and Biomedical Analysis &middot; Fundamental Synthetic Chemistry &middot;
-                Structural Characterisation &middot; Spectroscopy and Analysis &middot; Computer Programming
+                Pharmacokinetics &amp; Drug Metabolism · Modern Aspects of Organic Chemistry ·
+                Pharmaceutical and Biomedical Analysis · Fundamental Synthetic Chemistry ·
+                Structural Characterisation · Spectroscopy and Analysis · Computer Programming
               </p>
             </div>
           </div>
@@ -135,7 +134,7 @@
                 <span class="grade"><span class="grade-sub">B</span>Mathematics</span>
                 <span class="grade"><span class="grade-sub">B</span>Biology</span>
               </div>
-              <p class="card-body">Cambridge Chemistry Challenge &mdash; <em>Silver Award</em></p>
+              <p class="card-body">Cambridge Chemistry Challenge — <em>Silver Award</em></p>
             </div>
           </div>
 
@@ -146,45 +145,39 @@
               <div class="card-header">
                 <span class="card-title">West Park School</span>
               </div>
-              <p class="card-sub">GCSEs &mdash; 11 subjects including Mathematics, Sciences and French</p>
+              <p class="card-sub">GCSEs — 11 subjects including Mathematics, Sciences and French</p>
             </div>
           </div>
 
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- RESEARCH -->
-    <section id="research">
-      <div class="section-inner">
+      <!-- RESEARCH -->
+      <section id="research">
         <h2><span class="section-num">02</span>Research</h2>
-        <div class="stagger">
-          <div class="card featured animate-in">
-            <div class="featured-header">
-              <div>
-                <p class="card-eyebrow">Final Year Dissertation &middot; Literature Review</p>
-                <h3 class="card-headline">Opioids: Investigating Alternative Analgesic<br>Mechanisms &amp; Novel OUD Treatments</h3>
-              </div>
-              <div class="featured-meta">
-                <span class="date-badge">2026</span>
-              </div>
+        <div class="card featured animate-in">
+          <div class="featured-header">
+            <div>
+              <p class="card-eyebrow">Final Year Dissertation · Literature Review</p>
+              <h3 class="card-headline">Opioids: Investigating Alternative Analgesic<br>Mechanisms &amp; Novel OUD Treatments</h3>
             </div>
-            <p class="card-institution">Loughborough University &middot; MChem Medicinal &amp; Pharmaceutical Chemistry</p>
-            <p class="card-body">A narrative review critically evaluating selective Nav channel inhibitors (Nav1.7/1.8) as non-opioid analgesics, and pharmacotherapeutic strategies for opioid use disorder.</p>
-            <div class="research-tags">
-              <span>Nav1.7 / Nav1.8</span><span>Opioid Use Disorder</span><span>Clinical Trial Analysis</span>
-              <span>Analgesic Pharmacology</span><span>Lofexidine</span><span>XR-NTX</span><span>BUP-XR</span>
+            <div class="featured-meta">
+              <span class="date-badge">2026</span>
             </div>
           </div>
+          <p class="card-institution">Loughborough University · MChem Medicinal &amp; Pharmaceutical Chemistry</p>
+          <p class="card-body">A narrative review critically evaluating selective Nav channel inhibitors (Nav1.7/1.8) as non-opioid analgesics, and pharmacotherapeutic strategies for opioid use disorder.</p>
+          <div class="research-tags">
+            <span>Nav1.7 / Nav1.8</span><span>Opioid Use Disorder</span><span>Clinical Trial Analysis</span>
+            <span>Analgesic Pharmacology</span><span>Lofexidine</span><span>XR-NTX</span><span>BUP-XR</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="section-inner">
+      <!-- EXPERIENCE -->
+      <section id="experience">
         <h2><span class="section-num">03</span>Experience</h2>
-        <div class="timeline stagger">
+        <div class="timeline">
           <div class="timeline-entry animate-in">
             <div class="timeline-marker"></div>
             <div class="timeline-date">Apr 2022–Present</div>
@@ -202,14 +195,12 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <div class="section-inner">
+      <!-- SKILLS -->
+      <section id="skills">
         <h2><span class="section-num">04</span>Skills</h2>
-        <div class="skills-layout stagger">
+        <div class="skills-layout">
 
           <div class="skill-category animate-in">
             <h3 class="skill-cat-title">Laboratory</h3>
@@ -238,20 +229,18 @@
           <div class="skill-category animate-in">
             <h3 class="skill-cat-title">Achievements &amp; Activities</h3>
             <div class="skill-tags">
-              <span class="skill-tag highlight">Cambridge Chemistry Challenge &mdash; Silver (2023)</span>
+              <span class="skill-tag highlight">Cambridge Chemistry Challenge — Silver (2023)</span>
               <span class="skill-tag">Loughborough Hall Rugby Team (2024–25)</span>
             </div>
           </div>
 
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="section-inner">
+      <!-- CONTACT -->
+      <section id="contact">
         <h2><span class="section-num">05</span>Contact</h2>
-        <p class="contact-intro">Based in Derby, UK &middot; Open to relocation &middot; Full UK Driving Licence</p>
+        <p class="contact-intro">Based in Derby, UK · Open to relocation · Full UK Driving Licence</p>
         <div class="contact-links">
           <a href="mailto:samjleeming@gmail.com" class="contact-link" data-copy="samjleeming@gmail.com">
             <span class="contact-link-label">Email</span>
@@ -266,15 +255,15 @@
             <span class="contact-link-value">samuel-leeming</span>
           </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-  </main>
+      <footer>
+        <span class="footer-name">Samuel Leeming</span>
+        <span class="footer-copy">© 2026</span>
+      </footer>
 
-  <footer>
-    <span class="footer-name">Samuel Leeming</span>
-    <span class="footer-copy">&copy; 2025</span>
-  </footer>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
