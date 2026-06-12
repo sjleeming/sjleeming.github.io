@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,6 88,28 88,72 50,94 12,72 12,28' fill='none' stroke='%236fd3ff' stroke-width='8'/%3E%3C/svg%3E">
   <script>document.documentElement.classList.add('js');</script>
 
   <!-- SEO -->
@@ -69,7 +70,7 @@
         </dl>
 
         <nav class="side-nav" aria-label="Section navigation">
-          <a href="#education"><span class="nav-num">01</span><span class="nav-line"></span>Education</a>
+          <a href="#education"><span class="nav-num" aria-hidden="true">01</span><span class="nav-line"></span>Education</a>
           <a href="#research"><span class="nav-num">02</span><span class="nav-line"></span>Research</a>
           <a href="#experience"><span class="nav-num">03</span><span class="nav-line"></span>Experience</a>
           <a href="#skills"><span class="nav-num">04</span><span class="nav-line"></span>Skills</a>
@@ -81,7 +82,7 @@
             <span>Download CV</span>
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v8M3 6l4 4 4-4M1 11h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">Light</button>
+          <button class="theme-toggle" id="theme-toggle">Light</button>
         </div>
 
         <div class="sidebar-contacts">
@@ -97,7 +98,7 @@
 
       <!-- EDUCATION -->
       <section id="education">
-        <h2><span class="section-num">01</span>Education</h2>
+        <h2><span class="section-num" aria-hidden="true">01</span>Education</h2>
         <div class="timeline">
 
           <div class="timeline-entry animate-in">
@@ -154,7 +155,7 @@
 
       <!-- RESEARCH -->
       <section id="research">
-        <h2><span class="section-num">02</span>Research</h2>
+        <h2><span class="section-num" aria-hidden="true">02</span>Research</h2>
         <div class="card featured animate-in">
           <div class="featured-header">
             <div>
@@ -176,7 +177,7 @@
 
       <!-- EXPERIENCE -->
       <section id="experience">
-        <h2><span class="section-num">03</span>Experience</h2>
+        <h2><span class="section-num" aria-hidden="true">03</span>Experience</h2>
         <div class="timeline">
           <div class="timeline-entry animate-in">
             <div class="timeline-marker"></div>
@@ -199,7 +200,7 @@
 
       <!-- SKILLS -->
       <section id="skills">
-        <h2><span class="section-num">04</span>Skills</h2>
+        <h2><span class="section-num" aria-hidden="true">04</span>Skills</h2>
         <div class="skills-layout">
 
           <div class="skill-category animate-in">
@@ -239,7 +240,7 @@
 
       <!-- CONTACT -->
       <section id="contact">
-        <h2><span class="section-num">05</span>Contact</h2>
+        <h2><span class="section-num" aria-hidden="true">05</span>Contact</h2>
         <p class="contact-intro">Based in Derby, UK · Open to relocation · Full UK Driving Licence</p>
         <div class="contact-links">
           <a href="mailto:samjleeming@gmail.com" class="contact-link" data-copy="samjleeming@gmail.com">
@@ -257,7 +258,7 @@
         </div>
       </section>
 
-      <footer>
+      <footer role="contentinfo">
         <span class="footer-name">Samuel Leeming</span>
         <span class="footer-copy">© 2026</span>
       </footer>
