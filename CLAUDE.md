@@ -9,7 +9,7 @@ Plain HTML + CSS + JS. No build step, no frameworks. Push to GitHub and it deplo
 ## Files
 - `index.html` — all page content (single page, smooth scroll)
 - `style.css` — all styling
-- `script.js` — active nav link highlighting on scroll
+- `script.js` — theme toggle, scroll-spy nav, scroll reveals, copy-to-clipboard contacts
 
 ## Deploying changes
 1. Edit files locally
@@ -27,20 +27,24 @@ Plain HTML + CSS + JS. No build step, no frameworks. Push to GitHub and it deplo
 - Pages source: main / (root)
 
 ## Design principles
-- Minimal — as little clutter as possible
-- Colour palette: off-white background (#fafafa), accent blue (#2c5f8a)
-- Typography: Georgia serif for body, system-ui sans-serif for labels/nav
-- Max content width: 760px
+- Refined dark "molecular" aesthetic (default) with matching light theme; toggle persisted in localStorage, initial theme set FOUC-free by inline `<head>` script
+- Layout: sticky left sidebar (identity, nav, CV button, molecule SVG) + scrolling content column; stacks below 900px
+- Colour palette: deep navy (#090e18 bg, #101b2e cards), light-blue accent (#6fd3ff), blue→violet gradient (#3aa7e0→#7b6cf6); light theme equivalents in `[data-theme="light"]`
+- Typography: Inter for body/display, IBM Plex Mono for labels/eyebrows
+- Motion: scroll reveals (`.animate-in` gated behind `html.js` class for no-JS support), hover lifts, molecule drift — all guarded by prefers-reduced-motion
 
 ## Content source
 Based on Samuel_Leeming_CV.docx. Key sections: About, Education, Research, Experience, Skills, Contact.
 
+## Workflow instructions
+- When updating or creating any `.md` files, invoke the `claude-md-management` skill first (use `claude-md-management:revise-claude-md` when updating CLAUDE.md with session learnings, or `claude-md-management:claude-md-improver` when auditing/improving CLAUDE.md quality).
+
 ## Potential improvements discussed
 - Profile photo
-- LinkedIn link
-- Downloadable PDF CV
-- Dark mode toggle
 - Contact form
-- Timeline layout for Education/Experience
 - Dissertation section
 - Blog/notes section
+- og:image / social preview image (flagged in 2026-06 review)
+
+## Gotchas
+- If `git push` fails with "Invalid username or token": clear the stale credential (`git credential reject` fed protocol=https/host=github.com via temp file), then push again — Credential Manager prompts a fresh browser sign-in.
